@@ -1,0 +1,15 @@
+Host aws
+    HostName 43.206.250.98
+    Port 22
+    User root 
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+
+Host aws-ubuntu
+    HostName 43.206.250.98
+    Port 22
+    User ubuntu 
+    IdentityFile ~/.ssh/misyakuji-rsa.pem
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+
