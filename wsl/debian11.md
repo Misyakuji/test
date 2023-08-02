@@ -27,8 +27,6 @@ sudo apt install vim wget curl git gcc g++ systemctl net-tools
 sudo apt install neofetch openjdk-17-jdk maven nodejs npm ssh nmap redis mariadb
 ```
 
-
-
 #### 修改分辨率
 
 ```shell
@@ -58,10 +56,7 @@ xrandr --addmode <显示器名称> 1920x1080_60.00
 
 xrandr --output HDMI-1 --mode 1920x1080_60.00
 请注意，这些命令可能需要根据您的系统和硬件进行调整。W
-
 ```
-
-
 
 #### nmap扫描
 
@@ -78,11 +73,11 @@ https://www.bilibili.com/video/BV1po4y1t7CY/
 
 ```shell
 docker run -d -p 3000:3000 \
-	-e OPENAI_API_KEY="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" \
-	-e PROXY_URL="http:192.168.68.1:7890" \
-	--restart=always \
-	--name chatgpt-next-web \
-	yidadaa/chatgpt-next-web
+    -e OPENAI_API_KEY="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" \
+    -e PROXY_URL="http:192.168.68.1:7890" \
+    --restart=always \
+    --name chatgpt-next-web \
+    yidadaa/chatgpt-next-web
 ```
 
 #### 修改用户目录的中文文件夹为英文
@@ -98,7 +93,6 @@ xdg-user-dirs-gtk-update
 # 跳出对话框询问是否将目录转化为英文路径,同意并关闭
 
 export LANG=zh_CN.UTF-8
-
 ```
 
 ### 在 Debian 上安装 MySQL
@@ -118,8 +112,6 @@ sudo apt update
 sudo apt install mysql-server
 ```
 
-
-
 #### zsh-kali theme
 
 ```shell
@@ -136,32 +128,3 @@ PROMPT="
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}["
 ZSH_THEME_GIT_PROMPT_SUFFIX="] %{$reset_color%}"
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
