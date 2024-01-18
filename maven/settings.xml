@@ -258,7 +258,7 @@ under the License.
    | -->
   <activeProfiles>
     <!-- <activeProfile>jdk-1.8</activeProfile> -->
-    <activeProfile>jdk-17</activeProfile>
+    <!-- <activeProfile>jdk-17</activeProfile> -->
   </activeProfiles>
  
 </settings>
