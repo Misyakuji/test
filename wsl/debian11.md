@@ -112,19 +112,61 @@ sudo apt update
 sudo apt install mysql-server
 ```
 
-#### zsh-kali theme
 
-```shell
-local current_dir='%{$fg_bold[red]%}[%{$reset_color%}%~% %{$fg_bold[red]%}]%{$reset_color%}'
-local git_branch='$()%{$reset_color%}'
+Node Version Manager (nvm) 笔记
+
+下载
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+source ~/.bashrc
+
+nvm --version
+安装最新版本的Node.js
+使用 nvm install latest 命令可以安装最新版本的Node.js。
+
+安装指定版本的Node.js
+使用 nvm install node 命令后，需要输入要安装的版本号，例如 nvm install node 20.11.0。
+
+查看当前已安装的Node.js版本
+使用 nvm list 命令可以查看当前已安装的Node.js版本，可以缩写为 nvm ls。
+
+切换到指定版本的Node.js
+使用 nvm use 命令后，需要输入要切换到的版本号，例如 nvm use 20.11.0。
+
+删除指定版本的Node.js
+使用 nvm uninstall 命令后，需要输入要删除的版本号，例如 nvm uninstall 14.17.0。
+
+设置Node镜像地址
+使用 nvm node_mirror [url] 命令可以设置Node镜像地址
+nvm node_mirror https://npmmirror.com/mirrors/node/
+
+设置npm镜像地址
+使用 nvm npm_mirror [url] 命令可以设置npm镜像地址
+nvm npm_mirror https://npmmirror.com/mirrors/npm/
 
 
-PROMPT="
-%(?,%{$fg[blue]%}┌──╼%{$fg_bold[blue]%}(%{$fg_bold[red]%}%n%{$fg_bold[red]%}㉿%{$fg_bold[red]%}Debian%{$fg_bold[blue]%})%{$fg_bold[white]%}-%{$fg_bold[blue]%}[%{$fg_bold[green]%}%(5~|%-1~/…/%2~|%4~)%{$fg_bold[blue]%}]%{$reset_color%} ${git_branch}
-%{$fg[blue]%}└─╼%{$fg_bold[white]%} ❯%{$fg_bold[blue]%}❯%{$fg_bold[cyan]%}❯%{$reset_color%} ,
-%{$fg[blue]%}┌─╼%{$fg_bold[red]%}[%{$fg_bold[green]%}%(5~|%-1~/…/%2~|%4~)%{$fg_bold[blue]%}]%{$reset_color%}
-%{$fg[blue]%}└╼%{$fg_bold[white]%} ❯%{$fg_bold[blue]%}❯%{$fg_bold[cyan]%}❯%{$reset_color%} "
+npm查看当前源
+npm config get registry
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="] %{$reset_color%}"
-```
+npm更换国内源镜像
+npm config set registry https://registry.npmmirror.com/
+
+npm 官方原始镜像网址是：https://registry.npmjs.org/
+淘宝 NPM 镜像：https://registry.npmmirror.com
+阿里云 NPM 镜像：https://npm.aliyun.com
+腾讯云 NPM 镜像：https://mirrors.cloud.tencent.com/npm/
+华为云 NPM 镜像：https://mirrors.huaweicloud.com/repository/npm/
+网易 NPM 镜像：https://mirrors.163.com/npm/
+中科院大学开源镜像站：http://mirrors.ustc.edu.cn/
+
+
+JAVA环境安装
+
+apt install openjdk-17-jdk
+apt install openjdk-21-jdk
+
+
+查看安装jdk的版本
+update-java-alternatives --list
+jdk版本更换
+update-java-alternatives --set /usr/lib/jvm/java-1.17.0-openjdk-arm64
