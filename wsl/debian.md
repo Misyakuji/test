@@ -29,7 +29,7 @@ sudo apt update && apt upgrade -y && apt dist-upgrade -y
 ```shell
 sudo apt install vim wget curl git gcc g++ systemctl net-tools neofetch openjdk-17-jdk maven nodejs npm ssh nmap redis mariadb
 ```
-### sudo 免密码
+#### sudo 免密码
 
 ```shell
 vim /etc/sudoers
@@ -97,7 +97,7 @@ nmap -p- 127.0.0.1
 nmap -p 6379 127.0.0.1
 ```
 
-### 在 Debian 上安装 MySQL
+#### 在 Debian 上安装 MySQL
 
 ```shell
 # (ubuntu自带mysql源，可直接跳到最后一步安装)
@@ -226,7 +226,7 @@ npm 官方原始镜像：https://registry.npmjs.org/
 
 
 
-### JAVA环境安装
+#### JAVA环境安装
 ```shell
 # 安装jdk
 apt install openjdk-17-jdk
@@ -238,7 +238,7 @@ update-java-alternatives --list
 update-java-alternatives --set /usr/lib/jvm/java-1.17.0-openjdk-arm64
 ```
 
-### Git配置
+#### Git配置
 
 ```shell
 # windows下防止克隆文件时自动转换换行符
@@ -248,7 +248,7 @@ git config --global core.autocrlf input
 git config --global credential.helper store
 ```
 
-### 配置代理服务-v2ray
+#### 配置代理服务-v2ray
 
 ```shell
 # 一键安装脚本
