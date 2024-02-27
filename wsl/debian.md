@@ -186,11 +186,15 @@ nvm --version
 
 ```shell
 # nvm使用
+
+# 列出所有远程服务器的版本
+nvm ls-remote
+
 # 安装最新版本的Node.js
 nvm install latest
 
 # 安装指定版本的Node.js
-nvm install node 20.11.0
+nvm install 20.11.0
 
 # 查看当前已安装的Node.js版本,可以缩写为 nvm ls
 nvm list 
