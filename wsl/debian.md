@@ -245,11 +245,17 @@ update-java-alternatives --set /usr/lib/jvm/java-1.17.0-openjdk-arm64
 #### Git配置
 
 ```shell
+# 配置用户名
+git config --global user.name "username"
+# 配置密码
+git config --global user.password "password"
+# 配置用户邮箱
+git config --global user.email "email"
+# 保存认证信息
+git config --global credential.helper store
+
 # windows下防止克隆文件时自动转换换行符
 git config --global core.autocrlf input
-
-# git记住用户名密码
-git config --global credential.helper store
 ```
 
 #### 配置代理服务-v2ray
