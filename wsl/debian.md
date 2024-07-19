@@ -1,5 +1,79 @@
-#### 换源
+## WSL环境搭建
 
+#### 官方环境搭建参照
+https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment
+
+#### 开启WSL
+
+（1）打开 **虚拟机平台功能**：
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+（2）打开 **适用于Linux的Windows子系统** 功能：
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+#### 1.2 更新Linux内核
+下载最新安装包：
+- [适用于x64计算机的 WSL2 Linux内核更新包](https://link.zhihu.com/?target=https%3A//wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)。
+
+#### 1.3 设置WSL2为默认版本
+
+以管理员方式运行PowerShell运行命令，输入命令。
+```
+wsl --set-default-version 2
+```
+
+#### 安装发行版Linux
+
+ 微软商店直接安装
+
+[【WSL】WSL折腾之旅（2）安装ZSH和Docker - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/355493751)
+
+####  列出WSL子系统
+```
+wslconfig /list
+wslconfig /l
+wsl --list
+wsl -l -v
+```
+
+#### 关闭Debian子系统
+```
+wsl --terminate debian
+wsl -t debian
+```
+
+#### 关闭WSL
+```
+wsl --shutdown
+```
+
+#### 启动WSL
+```
+wsl
+```
+
+#### 注销指定的子系统
+```
+wslconfig /u Debian
+```
+
+#### 切换登录默认用户
+```powershell
+C:\Users\28100\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root
+```
+
+#### 设置默认发行版
+```shell
+wsl --set-default debian
+```
+
+
+## Linux常用操作(debian系)
+
+#### 换源
 ```properties
 # 中科大镜像站
 deb http://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free
@@ -18,10 +92,16 @@ deb http://mirrors.tencent.com/debian/ bullseye main non-free contrib
 deb http://mirrors.tencent.com/debian-security/ bullseye-security main
 deb http://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
 deb http://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+
+# 官方源
+deb http://deb.debian.org/debian bookworm main
+deb http://deb.debian.org/debian bookworm-updates main
+deb http://security.debian.org/debian-security bookworm-security main
+deb http://ftp.debian.org/debian bookworm-backports main
 ```
 #### 一键更新软件包
 ```shell
-sudo apt update && apt upgrade -y && apt dist-upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 ```
 
 #### 安装常用软件
@@ -32,7 +112,7 @@ sudo apt install vim wget curl git gcc g++ systemctl net-tools neofetch openjdk-
 #### sudo 免密码
 
 ```shell
-vim /etc/sudoers
+sudo vim /etc/sudoers
 # wsl(新建 sudoer 配置文件)
 sudo vim /etc/sudoers.d/<用户名>
 ```
