@@ -73,6 +73,17 @@ wsl --set-default debian
 
 ## Linux常用操作(debian系)
 
+#### Debian 发行版与代号
+```
+Debian 7 - Wheezy
+Debian 8 - Jessie
+Debian 9 - Stretch
+Debian 10 - Buster
+Debian 11 - Bullseye
+Debian 12 - Bookworm
+Debian 13 - Trixie (开发中)
+```
+
 #### 换源
 ```properties
 # 中科大镜像站
