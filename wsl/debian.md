@@ -5,20 +5,20 @@ https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment
 
 #### 开启WSL
 
-（1）打开 **虚拟机平台功能**：
+###### 打开虚拟机平台功能：
 ```
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-（2）打开 **适用于Linux的Windows子系统** 功能：
+###### 打开适用于Linux的Windows子系统功能：
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-#### 1.2 更新Linux内核
+#### 更新Linux内核
 下载最新安装包：
 - [适用于x64计算机的 WSL2 Linux内核更新包](https://link.zhihu.com/?target=https%3A//wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)。
 
-#### 1.3 设置WSL2为默认版本
+#### 设置WSL2为默认版本
 
 以管理员方式运行PowerShell运行命令，输入命令。
 ```
