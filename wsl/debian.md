@@ -80,6 +80,19 @@ C:\Users\[用户名]\AppData\Local\Microsoft\WindowsApps\debian.exe config --def
 wsl --set-default debian
 ```
 
+#### wsl使用systemd
+#访问 [官方文档](https://learn.microsoft.com/zh-cn/windows/wsl/systemd#how-to-enable-systemd) 
+```shell
+# 在/etc/wsl.conf中添加以下内容：
+[boot]
+systemd=true
+
+# 重启wsl
+
+# 验证
+systemctl list-unit-files --type=service
+```
+
 
 ## Linux常用操作(debian系)
 
@@ -340,7 +353,7 @@ apt install openjdk-21-jdk
 # 查看安装jdk的版本
 update-java-alternatives --list
 # jdk版本更换
-update-java-alternatives --set /usr/lib/jvm/java-1.17.0-openjdk-arm64
+update-java-alternatives --set /usr/lib/jvm/java-1.17.0-openjdk-amd64
 ```
 
 #### Git配置
