@@ -37,6 +37,10 @@ wslconfig /list
 wslconfig /l
 wsl --list
 wsl -l -v
+
+# 列出可下载的发行版
+wsl --list --online
+wsl -l -o
 ```
 
 #### 关闭Debian子系统
