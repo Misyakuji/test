@@ -43,6 +43,12 @@ wsl --list --online
 wsl -l -o
 ```
 
+#### 安装发行版
+```
+wsl --install -d Debian
+
+```
+
 #### 关闭Debian子系统
 ```
 wsl --terminate debian
