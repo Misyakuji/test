@@ -72,7 +72,7 @@ wslconfig /u Debian
 
 #### 切换登录默认用户
 ```powershell
-C:\Users\28100\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root
+C:\Users\[用户名]\AppData\Local\Microsoft\WindowsApps\debian.exe config --default-user root
 ```
 
 #### 设置默认发行版
