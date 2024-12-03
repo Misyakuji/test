@@ -11,3 +11,4 @@
 | github绑定服务器，使用workflow集成部署 |     |      |      |
 | 博客中引入评论机制                  |     |      |      |
 
+bot执行Linux命令
